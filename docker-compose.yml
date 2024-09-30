@@ -1,0 +1,15 @@
+version: '3.8'
+
+networks:
+  shared_network:
+    external: true
+    
+services:
+  web3:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/resource_mgt_platform-business_process
+    ports:
+      - "30303:30303"
